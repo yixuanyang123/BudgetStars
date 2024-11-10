@@ -1,0 +1,14 @@
+.feature-page {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .feature-page h2 {
+    color: #0070f3;
+  }
+  
+  .feature-page p {
+    color: #666;
+  }
