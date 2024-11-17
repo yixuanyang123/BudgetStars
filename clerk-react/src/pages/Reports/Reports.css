@@ -1,14 +1,79 @@
 .feature-page {
-    max-width: 700px;
-    margin: auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .feature-page h2 {
-    color: #0070f3;
-  }
-  
-  .feature-page p {
-    color: #666;
-  }
+  max-width: 1200px; 
+  margin: auto;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-page h2 {
+  font-size: 2.5rem; 
+  margin: 0;
+}
+
+p {
+  font-size: 1.2rem; 
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.chart-container {
+  margin: 30px auto;
+  height: 50vh; 
+  width: 70vw; 
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: #0070f3;
+  color: white;
+}
+
+.toggle-buttons button:hover {
+  background-color: #005bb5;
+  color: white;
+}
+
+.home-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0070f3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #005bb5;
+}
+
+
