@@ -127,7 +127,7 @@ const ReportsPage: React.FC = () => {
         </button>
       </div>
 
-      <div className="chart-container">
+      <div className="report-chart-container">
         <Line data={data} options={chartOptions} />
       </div>
 
