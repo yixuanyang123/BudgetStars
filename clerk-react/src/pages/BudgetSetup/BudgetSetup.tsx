@@ -16,6 +16,11 @@ const BudgetSetupPage: React.FC = () => {
   const [previousValues, setPreviousValues] = useState({ ...categories });
 
   const handleBudgetChange = (category: string, value: number) => {
+    if (value < 0) {
+      alert("Budget values cannot be negative.");
+      return; // Exit the function early
+    }
+
     const updatedCategories = { ...categories, [category]: value };
     const sumOfBudgets = Object.values(updatedCategories).reduce(
       (sum, val) => sum + val,
@@ -51,7 +56,14 @@ const BudgetSetupPage: React.FC = () => {
               type="number"
               id="total-budget"
               value={totalBudget}
-              onChange={(e) => setTotalBudget(Number(e.target.value))}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                if (value < 0) {
+                  alert("The total budget cannot be negative.");
+                } else {
+                  setTotalBudget(value);
+                }
+              }}
               placeholder="Enter your total budget"
             />
           </div>
